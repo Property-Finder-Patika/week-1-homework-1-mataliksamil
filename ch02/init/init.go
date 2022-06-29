@@ -2,8 +2,10 @@ package main
 
 import "fmt"
 
+// i can be used even if it is declared below parts of the code
 var j int = i + 1
 
+// function calls  by declaration out of the scope of the main function
 func createB() bool {
 	return true
 }

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-type yazi string
+type yazi string // type dec
 
 func main() {
 
@@ -15,6 +15,7 @@ func main() {
 
 	type text string
 	var t text = "I love Go!"
+	// type mismatch below because yazi vs tex even if they are both strings
 	//fmt.Println(s == t) // That's also related to assignability
 
 	//var ss string = "I love Go!"

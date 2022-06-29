@@ -10,8 +10,9 @@ import (
 func main() {
 
 	cDegree := 36.7
+	// convert function can be imported
 	fDegree := converter.Convert('c', 'f', cDegree)
 	fmt.Printf("%f celcius is %f fahrenheit.", cDegree, fDegree)
-
-	//fDegree = converter.convertFromCelsiusToFahrenheit(fDegree)
+	//convertFromCelsiusToFahrenheit function cannot be imported
+	fDegree = converter.convertFromCelsiusToFahrenheit(fDegree)
 }

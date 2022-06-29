@@ -5,19 +5,19 @@ import (
 	"os"
 )
 
-var s string = "I love Go!"
+var s string = "I love Go!" // in the scope of whole package
 
 func main() {
-	fmt.Printf("%s\n", s)
-
-	var s string = "I really love Go!"
-	fmt.Printf("%s\n", s)
+	fmt.Printf("%s\n", s)                 //
+	fmt.Println("______________________") //
+	var s string = "I really love Go!"    // assignment (update) on s variable
+	fmt.Printf("%s\n", s)                 // assignment works on func main scope
 
 	//var s string = "I said you, I really love Go!"
 	//fmt.Printf("%s\n", s)
 	//x := "hellooww"
 	for i, s := range s { // That's so strange!
-		s := s
+		s := s // parse s string indexes and use all of the instances seperately but IN THE SCOPE OF FOR LOOP
 		fmt.Printf("%d:  %c\n", i, s)
 	}
 	fmt.Printf("%s\n", s)
@@ -26,12 +26,12 @@ func main() {
 
 	length := len(s)
 	fmt.Printf("%d\n", length)
-	if length := f(); length > length {
+	if length := f(); /*This assignment is valid in if statemen scope*/ length > length {
 		fmt.Printf("In if %d\n", length)
 	} else {
 		fmt.Printf("In else %d\n", length)
 	}
-	fmt.Printf("%d\n", length)
+	fmt.Printf("%d\n", length) // assignment in the if statement scope does not effect outside
 
 	fmt.Println("*****************")
 }
